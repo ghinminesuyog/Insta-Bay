@@ -1,0 +1,18 @@
+#application-toolbar{
+    background-color: #457B9D;
+    color: #ffffff;
+    font-family: 'Coming Soon';
+    font-size: 30px;
+    justify-content: space-between;
+
+    .app-title{
+        .title{
+            cursor: pointer;
+        }
+    }
+
+    .toolbar-icon{
+        margin: 20px;
+        cursor: pointer;
+    }
+}
