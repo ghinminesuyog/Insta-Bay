@@ -9,7 +9,7 @@ import { ShopItemsService } from "../../pages/shop/shop-items.service";
 })
 export class ItemComponent implements OnInit {
 
-  @Input() item: Product;
+  @Input() item: Product = new Product('','','',0,'','');
   prevPrice :number = 0;
 
   constructor(
