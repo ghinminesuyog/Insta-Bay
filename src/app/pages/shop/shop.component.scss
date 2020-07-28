@@ -1,0 +1,18 @@
+#shop{
+    // display: grid;
+    // width: 100%;
+    justify-content: space-between;
+    grid-gap: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-family: Ubuntu;
+
+    app-shop-item{
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        background-color: #f1faee;
+    }
+}

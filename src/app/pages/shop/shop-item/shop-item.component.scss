@@ -1,0 +1,51 @@
+.item-tile {
+    
+   
+    // color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    .item-image{
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .lower-half {
+        display: grid;
+        height: 125px;
+        margin-top: auto;
+
+        .item-name{
+            font-size: 18px;
+        }
+
+
+        .item-description {
+            margin:10px 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            color: #1D3557;
+            font-size: 14px;
+        }
+
+        .item-price {
+            color: #e63946;
+            font-size: 18px;
+
+            .original{
+                text-decoration: line-through;
+                font-size: 14px;
+                color: black;
+            }
+        }
+    }
+}

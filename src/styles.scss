@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$my-app-primary-color: (
+    100: #f1faee,
+    contrast: (
+        100: #ffffff,
+    ),
+);
+$my-app-accent-color: (
+    100: #457b9d,
+    contrast: (
+        100: #000000,
+    ),
+);
+
+$my-app-warn-color: (
+    100: #e63946,
+    contrast: (
+        100: #f6f6f6,
+    ),
+);
+
+$my-primary: mat-palette($my-app-primary-color, 100);
+$my-accent: mat-palette($my-app-accent-color, 100);
+$my-warn: mat-palette($my-app-warn-color, 100);
+
+$my-app-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
+
+@include angular-material-theme($my-app-theme);
+
+html, body {
+    overflow: auto;
+}

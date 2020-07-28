@@ -1,0 +1,43 @@
+<div id="item-page">
+    <div class="left-half">
+        <div class="product-image">
+            <img max-height="450px" style="max-width: 100%;" src={{item.image}}>
+        </div>
+
+        <div class="product-price">
+          <span class ="previous-price">$ {{item.originalPrice}}</span> $ {{item.price}}
+        </div>
+        <div class="delivery-charges">
+            *Delivery charge ($5) not included
+        </div>
+
+        <div class="action-buttons">
+            <button mat-raised-button color="warn">
+    
+                    <mat-icon>shopping_cart</mat-icon>
+                
+                    Add to cart
+    
+            </button>
+    
+    
+            <button mat-raised-button color="warn">
+    
+                    <mat-icon>favorite</mat-icon>
+    
+                Add to list
+            </button>
+    
+        </div>
+    </div>
+    <div class="right-half">
+        <div class="product-title">
+            {{item.title}}
+        </div>
+        <div class="product-description">
+            {{item.description}}
+        </div>
+    </div>
+
+    
+</div>

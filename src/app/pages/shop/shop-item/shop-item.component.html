@@ -1,0 +1,9 @@
+<div class="item-tile" (click)="viewProduct()" >
+    <img class="item-image" height="100px" src={{item.image}}>
+
+    <div class="lower-half">
+        <div class="item-name">{{item.title}}</div>
+        <div class="item-description"> {{item.description}}</div>
+        <div class="item-price"><span class ="original">$ {{item.originalPrice}} </span>$ {{item.price}}</div>
+    </div>
+</div>
