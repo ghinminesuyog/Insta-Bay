@@ -20,26 +20,23 @@ export class ItemComponent implements OnInit {
 
   ngOnInit(): void {
     var id = this.route.snapshot.params.id;
-    // this.item.id = id;
-    // var desc = this.route.snapshot.params.description;
-    // var price = this.route.snapshot.params.price;
-    // var title = this.route.snapshot.params.title;
-    // var image = this.route.snapshot.params.image;
-    // var cat = this.route.snapshot.params.category
-
-
-
-    // this.prevPrice = Number(( Number(price) * 49/100 + Number(price)).toFixed(3));
-
+   
     this._shopService.getProduct(id).subscribe(
       (res) => {
         var product = new Product(res["id"], res["title"], res["description"], res["price"], res["imageURL"], res["category"]);
         this.item = product
       }
     )
+  }
 
-    // this.item = new Product(id, title, desc, price, image, cat)
+  addToCart(){
+    var alreadyInCart = this._shopService.checkCart(this.item);
 
+    if (alreadyInCart) {
+      this._shopService.removeFromCart(this.item)
+    }else{
+      this._shopService.moveToCart(this.item)
+    }
   }
 
 }

@@ -4,10 +4,6 @@ import { Observable } from 'rxjs';
 import { Product } from "../../../models/product";
 import { map } from 'rxjs/operators';
 
-
-// Using : 
-// https://fakestoreapi.com/docs
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,30 +12,37 @@ import { map } from 'rxjs/operators';
 
 export class ShopItemsService {
 
+  cart: Product[] = []
+
   constructor(
     private _httpClient: HttpClient
   ) { }
 
-  // products: Product[] = [];
-
   getProduct(id) {
-
-    console.log('In get prod')
-
-    var item: Product;
-
     return this._httpClient.get(`https://5f1fee61fba6d400169d4630.mockapi.io/product/${id}`)
-    
-
-
-    // return item;
-
   }
 
 
   generateProducts() {
-    var products: Product[] = []
-
     return this._httpClient.get('https://5f1fee61fba6d400169d4630.mockapi.io/product')
   }
+
+  moveToCart(item) {
+    this.cart.push(item);
+    console.log('Added to cart')
+  }
+
+  checkCart(item: Product) {
+    return this.cart.includes(item,0)
+  }
+
+  removeFromCart(item: Product) {
+    this.cart.forEach((value, index) => {
+      if (item.id == value.id) {
+        this.cart.splice(index, 1);
+        console.log('Removed from cart')
+      }
+    })
+  }
+
 }
