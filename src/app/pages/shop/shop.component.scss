@@ -1,4 +1,4 @@
-#shop{
+#shop {
     // display: grid;
     // width: 100%;
     justify-content: space-between;
@@ -9,10 +9,15 @@
 
     font-family: Ubuntu;
 
-    app-shop-item{
+    app-shop-item {
         width: 250px;
         height: 250px;
         border-radius: 10px;
         background-color: #f1faee;
+        margin: auto;
+        // @media screen and (min-width: 1439px) {
+        //     width: 450px;
+        //     height: 450px;
+        // }
     }
 }

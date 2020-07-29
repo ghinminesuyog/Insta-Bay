@@ -1,6 +1,4 @@
 .item-tile {
-    
-   
     // color: white;
     height: 100%;
     width: 100%;
@@ -11,9 +9,15 @@
 
     cursor: pointer;
 
-    .item-image{
+    .item-image {
         max-width: 100%;
         margin: auto;
+
+        // @media screen and (min-width: 1439px) {
+        //     height: auto;
+        //     width: auto;
+        //     max-height: 250px;
+        // }
     }
 
     .lower-half {
@@ -21,19 +25,18 @@
         height: 125px;
         margin-top: auto;
 
-        .item-name{
-            font-size: 18px;
+        .item-name {
+            // font-size: 2em;
         }
 
-
         .item-description {
-            margin:10px 0px;
+            margin: 10px 0px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 3; /* number of lines to show */
             -webkit-box-orient: vertical;
-            color: #1D3557;
+            color: #1d3557;
             font-size: 14px;
         }
 
@@ -41,7 +44,7 @@
             color: #e63946;
             font-size: 18px;
 
-            .original{
+            .original {
                 text-decoration: line-through;
                 font-size: 14px;
                 color: black;

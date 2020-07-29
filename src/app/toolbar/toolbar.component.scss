@@ -1,18 +1,36 @@
 #application-toolbar{
     // background-color: #457B9D;
+    position: fixed;
+    top: 0px;
+    left: 0;
+
+    height: 4em;
+
     color: #ffffff;
     font-family: 'Coming Soon';
-    font-size: 30px;
+    font-size: 1em;
     justify-content: space-between;
 
     .app-title{
         .title{
             cursor: pointer;
+            font-size: 2em;
         }
     }
 
     .toolbar-icon{
-        margin: 20px;
+        margin: 10px;
+        // font-size: 2em;
         cursor: pointer;
     }
+
+    // @media screen and (min-width:1439px) {
+    //     height: 7vw;
+    //     font-size: 3vw;
+    //     .toolbar-icon{
+    //         font-size: 3vw;
+    //         margin: 0px 3vw;
+    //     }
+        
+    // }
 }

@@ -32,8 +32,10 @@ export class ShopItemsService {
     console.log('Added to cart')
   }
 
-  checkCart(item: Product) {
-    return this.cart.includes(item,0)
+  checkCart(item: Product) : boolean{
+    var exists =  this.cart.includes(item,0);
+    console.log('Item exists: ', exists);
+    return exists;
   }
 
   removeFromCart(item: Product) {

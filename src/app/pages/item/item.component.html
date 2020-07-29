@@ -5,29 +5,39 @@
         </div>
 
         <div class="product-price">
-          <span class ="previous-price">$ {{item.originalPrice}}</span> $ {{item.price}}
+            <span class="previous-price">$ {{item.originalPrice}}</span> $ {{item.price}}
         </div>
         <div class="delivery-charges">
             *Delivery charge ($5) not included
         </div>
 
         <div class="action-buttons">
-            <button mat-raised-button color="warn" (click)="addToCart()">
-    
+            <div class="action-button left-action-button" color="warn" (click)="addToCart()">
+                <div class ="action-button-child">
                     <mat-icon>shopping_cart</mat-icon>
-                
-                    Add to cart
-    
-            </button>
-    
-    
-            <button mat-raised-button color="warn">
-    
+                    <span *ngIf="alreadyInCart">
+                        Remove from cart
+                    </span>
+                    <span *ngIf="!alreadyInCart">
+                        Add to cart
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="action-button right-action-button" color="warn" (click)="addToList()">
+                <div class ="action-button-child">
                     <mat-icon>favorite</mat-icon>
-    
-                Add to list
-            </button>
-    
+                    <span *ngIf="alreadyInList">
+                        Remove from list
+                    </span>
+                    <span *ngIf="!alreadyInList">
+                        Add to list
+                    </span>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="right-half">
@@ -39,5 +49,5 @@
         </div>
     </div>
 
-    
+
 </div>
